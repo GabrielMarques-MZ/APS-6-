@@ -1,0 +1,21 @@
+header {
+    background: gray;
+    .header {
+        align-items: center;
+        .logo {
+            font-size: 40px;
+            line-height: 85px;
+
+        }
+        display: flex;
+        justify-content: space-between;
+        .nav {
+            ul {
+                display: flex;
+                li {
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+}
