@@ -1,8 +1,11 @@
 // Framework
-@import 'framework/bootstrap.scss';
+@import "framework/bootstrap";
 
 // Base
-@import 'base/reset';
+@import "base/reset";
+@import "base/variaveis";
+@import "base/mixins";
 
 // Pages
-@import 'pages/home.scss';
+@import "pages/home";
+@import "pages/login";

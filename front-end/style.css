@@ -11806,4 +11806,60 @@ header .header .nav ul li {
   padding-right: 15px;
 }
 
+body {
+  background: url(../front-end/img/background_img.png) no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  place-content: center;
+}
+body .area_login {
+  align-self: center;
+}
+body .area_login .campo_login {
+  width: 450px;
+  height: 600px;
+  border-radius: 130px;
+  background-color: #242424;
+  opacity: 90%;
+  border: 3px solid #28922c;
+}
+body .area_login .campo_login p {
+  color: #28922c;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+body .area_login .campo_login .foto_login {
+  width: 140px;
+  height: 140px;
+  margin: 80px auto 100px auto;
+  border: 3px solid #28922c;
+  border-radius: 130px;
+  background: url(..//front-end/img/user_img.png);
+}
+body .area_login .campo_login .texto-login p {
+  text-transform: uppercase;
+}
+body .area_login .campo_login .btn_login {
+  display: flex;
+  place-content: center;
+  width: 300px;
+  height: 60px;
+  opacity: 90%;
+  margin: 100px auto 0 auto;
+  background: #242424;
+  border-radius: 30px;
+  border: 3px solid #28922c;
+  cursor: pointer;
+}
+body .area_login .campo_login .btn_login p {
+  color: #28922c;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  align-self: center;
+}
+
 /*# sourceMappingURL=style.css.map */
