@@ -1,0 +1,29 @@
+header {
+    background: $bg-header;
+    .header {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        &__logo{
+            color: $textColor1;
+            h1 {
+                @include fontes(24);
+                span {
+                    @include fontes(38);
+                }
+            }
+        }
+        &__user {
+            display: flex;
+            align-items: center;
+            img {
+                height: 70px;
+                width: 70px;
+            }
+            span {
+                padding-left: 15px;
+                color: $textColor1;
+            }
+        }
+    }
+}

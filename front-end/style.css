@@ -11806,17 +11806,17 @@ header .header .nav ul li {
   padding-right: 15px;
 }
 
-body {
+.body {
   background: url(../front-end/img/background_img.png) no-repeat;
   background-size: cover;
   display: flex;
   height: 100vh;
   place-content: center;
 }
-body .area_login {
+.body .area_login {
   align-self: center;
 }
-body .area_login .campo_login {
+.body .area_login .campo_login {
   width: 450px;
   height: 600px;
   border-radius: 130px;
@@ -11824,14 +11824,14 @@ body .area_login .campo_login {
   opacity: 90%;
   border: 3px solid #28922c;
 }
-body .area_login .campo_login p {
+.body .area_login .campo_login p {
   color: #28922c;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
 }
-body .area_login .campo_login .foto_login {
+.body .area_login .campo_login .foto_login {
   width: 140px;
   height: 140px;
   margin: 80px auto 100px auto;
@@ -11839,10 +11839,10 @@ body .area_login .campo_login .foto_login {
   border-radius: 130px;
   background: url(..//front-end/img/user_img.png);
 }
-body .area_login .campo_login .texto-login p {
+.body .area_login .campo_login .texto-login p {
   text-transform: uppercase;
 }
-body .area_login .campo_login .btn_login {
+.body .area_login .campo_login .btn_login {
   display: flex;
   place-content: center;
   width: 300px;
@@ -11854,12 +11854,52 @@ body .area_login .campo_login .btn_login {
   border: 3px solid #28922c;
   cursor: pointer;
 }
-body .area_login .campo_login .btn_login p {
+.body .area_login .campo_login .btn_login p {
   color: #28922c;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: bold;
   align-self: center;
+}
+
+header {
+  background: #0F7421;
+}
+header .header {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+}
+header .header__logo {
+  color: #FFFFFF;
+}
+header .header__logo h1 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+}
+header .header__logo h1 span {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 52px;
+}
+header .header__user {
+  display: flex;
+  align-items: center;
+}
+header .header__user img {
+  height: 70px;
+  width: 70px;
+}
+header .header__user span {
+  padding-left: 15px;
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=style.css.map */
