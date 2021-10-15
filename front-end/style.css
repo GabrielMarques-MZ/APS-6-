@@ -11888,6 +11888,10 @@ header .header__logo h1 span {
   font-weight: bold;
   font-size: 38px;
   line-height: 52px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
 }
 header .header__user {
   display: flex;
@@ -11906,20 +11910,20 @@ main {
   background: url(../front-end/img/bg_user1.png) no-repeat;
   background-size: cover;
   display: flex;
-  height: 150vh;
+  height: 89.7vh;
   place-content: center;
 }
 main .user1__pesquisa {
-  margin-top: 105px;
+  margin-top: 80px;
   width: 1090px;
-  height: 991px;
+  height: 700px;
   background: rgba(36, 36, 36, 0.8);
   border: 4px solid #000000;
   box-sizing: border-box;
   border-radius: 130px;
 }
 main .user1__pesquisa .user1__form {
-  padding-top: 132px;
+  padding-top: 110px;
 }
 main .user1__pesquisa .user1__form form {
   display: flex;
@@ -11935,14 +11939,19 @@ main .user1__pesquisa .user1__form form {
 }
 main .user1__pesquisa .user1__form form label {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 52px;
   font-style: normal;
   font-weight: 500;
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 30px;
+  line-height: 35px;
 }
 main .user1__pesquisa .user1__form form select {
   width: 580px;
-  height: 60px;
+  height: 50px;
   background: #FFFFFF;
   border: 3px solid #28922C;
   box-sizing: border-box;

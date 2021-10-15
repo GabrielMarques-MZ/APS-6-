@@ -32,18 +32,18 @@ main {
     background: url(../front-end/img/bg_user1.png) no-repeat;
     background-size: cover;
     display: flex;
-    height: 150vh;
+    height: 89.7vh;
     place-content: center;
     .user1__pesquisa {
-        margin-top: 105px;
+        margin-top: 80px;
         width: 1090px;
-        height: 991px;
+        height: 700px;
         background: rgba(36, 36, 36, 0.8);
         border: 4px solid #000000;
         box-sizing: border-box;
         border-radius: 130px;
         .user1__form {
-            padding-top: 132px;
+            padding-top: 110px;
             form {
                 display: flex;
                 justify-content: space-between;
@@ -53,11 +53,11 @@ main {
                 color: $textColor1;
                 @include fontes(20);
                 label {
-                    @include fontes(48);
+                    @include fontes(38);
                 }
                 select {
                     width: 580px;
-                    height: 60px;
+                    height: 50px;
                     background: #FFFFFF;
                     border: 3px solid #28922C;
                     box-sizing: border-box;
