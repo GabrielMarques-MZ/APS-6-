@@ -7,6 +7,7 @@ header {
         &__logo{
             color: $textColor1;
             h1 {
+                text-transform: uppercase;
                 @include fontes(24);
                 span {
                     @include fontes(38);
@@ -66,5 +67,24 @@ main {
                 }
             }
         }
+        .user1__btn {
+            padding-left: 628PX;
+            .user1__btn__search {
+                width: 327px;
+                height: 40px;
+                background: #FFFFFF;
+                border: 3px solid #28922C;
+                box-sizing: border-box;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 20px;
+                align-items: center;
+            }
+        }
     }
+}
+
+
+
+.section__two {
+    display: inline-block;
 }
