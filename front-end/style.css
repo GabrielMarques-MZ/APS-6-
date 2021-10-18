@@ -11973,6 +11973,10 @@ main .user1__pesquisa .user1__btn .user1__btn__search {
   align-items: center;
 }
 
+.table {
+  border: 1px solid black;
+}
+
 .section__two {
   display: inline-block;
 }
