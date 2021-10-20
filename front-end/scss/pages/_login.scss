@@ -17,6 +17,10 @@
         color: $primary-color;
         @include fontes(20);
       }
+      a {
+        display: flex;
+        @include fontes(16.1);
+      }
       .foto_login {
         width: 140px;
         height: 140px;
@@ -53,3 +57,5 @@
     }
   }
 }
+
+

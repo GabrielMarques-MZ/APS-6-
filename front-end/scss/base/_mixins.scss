@@ -5,6 +5,15 @@
     font-weight: bold;
     align-self: center;
   }
+  @if $size == 16.1 {
+    font-size: 16px;
+    font-weight: bold;
+    align-self: center;
+    color: $text-error;
+    place-content: center;
+    margin-top: 20px;
+    text-decoration: none;
+  }
   @if $size == 20 {
     font-size: 20px;
     font-weight: bold;
