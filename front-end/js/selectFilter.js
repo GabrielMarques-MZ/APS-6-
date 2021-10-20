@@ -53,7 +53,6 @@ botao.addEventListener('click', (e) => {
     tabela.innerHTML =  `<td>${locais}</td><td>${endereco}</td><td>${produtos}</td><td>${insumos}</td><td>${tratores}</td>` ;
     tabela.append(td);
   } else {
-    tabela.innerHTML =  none ;
     alert('Preencha todos os campos');
   }
 });
