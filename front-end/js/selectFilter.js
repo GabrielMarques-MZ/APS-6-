@@ -25,20 +25,10 @@ window.onload = function() {
   }
   locaisSel.onchange = function() {
     //empty produtoss- and enderecos- dropdowns
-    produtosSel.length = 1;
     enderecoSel.length = 1;
     //display correct values
     for (var y in locaisObject[this.value]) {
       enderecoSel.options[enderecoSel.options.length] = new Option(y, y);
-    }
-  }
-  enderecoSel.onchange = function() {
-    //empty produtoss dropdown
-    produtosSel.length = 1;
-    //display correct values
-    var z = locaisObject[locaisSel.value][this.value];
-    for (var i = 0; i < z.length; i++) {
-      produtosSel.options[produtosSel.options.length] = new Option(z[i], z[i]);
     }
   }
 }
@@ -48,17 +38,24 @@ var botao = document.getElementById('botao');
 var tabela = document.getElementById('tabela');
 
 botao.addEventListener('click', (e) => {
-  e.preventDefault();
-  console.log('Envie o form');
+  if (produtosSel.value !== '3') {
+    e.preventDefault();
+    console.log('Envie o form');
 
-  var locais = locaisSel.value;
-  var endereco = enderecoSel.value;
-  var produtos = produtosSel.value;
-  var insumos = insumosSel.value;
-  var tratores = tratoresSel.value;
-  console.log(locais, endereco, produtos);
+    var locais = locaisSel.value;
+    var endereco = enderecoSel.value;
+    var produtos = produtosSel.value;
+    var insumos = insumosSel.value;
+    var tratores = tratoresSel.value;
+    console.log(locais, endereco, produtos);
 
-  let td = document.createElement("td");
-  tabela.innerHTML =  `<td>${locais}</td><td>${endereco}</td><td>${produtos}</td><td>${insumos}</td><td>${tratores}</td>` ;
-  tabela.append(td);
+    let td = document.createElement("td");
+    tabela.innerHTML =  `<td>${locais}</td><td>${endereco}</td><td>${produtos}</td><td>${insumos}</td><td>${tratores}</td>` ;
+    tabela.append(td);
+  } else {
+    tabela.innerHTML =  none ;
+    alert('Preencha todos os campos');
+  }
 });
+
+
