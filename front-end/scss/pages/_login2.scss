@@ -1,81 +1,80 @@
 .body {
-    background: url(../front-end/img/background_img.png) no-repeat;
-    background-size: cover;
-    display: flex;
-    height: 100vh;
-    place-content: center;
-    .area__login {
-        align-self: center;
-        &__campo {
-            width: 450px;
-            height: 600px;
-            border-radius: 130px;
-            background-color: #242424;
-            opacity: 90%;
-            border: 3px solid #28922c;
-            &__texto-login {
-                p {
-                    display: block;
-                    color: red;
-                    font-family: "Roboto", Arial, Helvetica, sans-serif;
-                    text-transform: uppercase;
-                    font-size: 20px;
-                    font-weight: bold;
-                    text-align: center;
-                }
-            }
-            &__foto-login {
-                width: 140px;
-                height: 140px;
-                margin: 80px auto 80px auto;
-                border: 3px solid #28922c;
-                border-radius: 130px;
-                background: url(..//front-end/img/user_img.png);
-
-            }
-            &__login-user {
-                display: flex;
-                place-content: center;
-            }
-            &__senha-user {
-                display: flex;
-                place-content: center;
-            }
+  background: url(../front-end/img/background_img.png) no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  place-content: center;
+  .area__login {
+    align-self: center;
+    &__campo {
+      width: 450px;
+      height: 600px;
+      border-radius: 130px;
+      background-color: #242424;
+      opacity: 90%;
+      border: 3px solid #28922c;
+      &__texto-login {
+        p {
+          display: block;
+          color: red;
+          font-family: "Roboto", Arial, Helvetica, sans-serif;
+          text-transform: uppercase;
+          font-size: 20px;
+          font-weight: bold;
+          text-align: center;
         }
+      }
+      &__foto-login {
+        width: 140px;
+        height: 140px;
+        margin: 80px auto 80px auto;
+        border: 3px solid #28922c;
+        border-radius: 130px;
+        background: url(..//front-end/img/user_img.png);
+      }
+      &__login-user {
+        display: flex;
+        place-content: center;
+      }
+      &__senha-user {
+        display: flex;
+        place-content: center;
+      }
     }
+  }
 }
-  
+
 #login::placeholder,
 #senha::placeholder {
-color: #8a8a8a;
+  color: #8a8a8a;
 }
-  
+
 #login {
-    padding-top: 5px;
-    padding-left: 30px;
-    font-size: 16px;
-    background: none;
-    border: none;
-    border-bottom: 3px solid #28922c;
-    width: 220px;
-    margin-top: 40px;
-    background-image: url(/front-end/img/user_icon.png);
-    background-repeat: no-repeat;
-    outline: none;
-    color: #fff;
+  padding-top: 5px;
+  padding-left: 30px;
+  font-size: 16px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid #28922c;
+  width: 220px;
+  margin-top: 40px;
+  background-image: url(/front-end/img/user_icon.png);
+  background-repeat: no-repeat;
+  outline: none;
+  color: #fff;
 }
-  
+
 #senha {
-    padding-top: 5px;
-    padding-left: 30px;
-    font-size: 16px;
-    background: none;
-    border: none;
-    border-bottom: 3px solid #28922c;
-    width: 220px;
-    margin-top: 40px;
-    background-image: url(/front-end/img/lock_icon.png);
-    background-repeat: no-repeat;
-    outline: none;
-    color: #fff;
+  padding-top: 5px;
+  padding-left: 30px;
+  font-size: 16px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid #28922c;
+  width: 220px;
+  margin-top: 40px;
+  background-image: url(/front-end/img/lock_icon.png);
+  background-repeat: no-repeat;
+  outline: none;
+  color: #fff;
 }
