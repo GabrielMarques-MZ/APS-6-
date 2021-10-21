@@ -17,12 +17,14 @@ let insumosSel = document.getElementById("insumos");
 let tratoresSel = document.getElementById("tratores");
 
 // Carremento dos selects
+console.log(window.onload)
 window.onload = function() {
 
   
   for (let x in locaisObject) {
     locaisSel.options[locaisSel.options.length] = new Option(x, x);
   }
+
   locaisSel.onchange = function() {
     //empty produtoss- and enderecos- dropdowns
     enderecoSel.length = 1;
@@ -32,12 +34,13 @@ window.onload = function() {
     }
   }
 }
+console.log(window.onload)
+
 
 // Recebimento dos dados do formulario
 let botao = document.getElementById('botao');
 let tabela = document.getElementById('tabela');
 let idBotao = document.getElementById("botao")
-console.log(idBotao)
 
 // Verifica se existem campos vazios
 botao.addEventListener('click', (e) => {
@@ -51,8 +54,6 @@ botao.addEventListener('click', (e) => {
     alert('Insira um valor no campo Insumos');
   } else if (tratoresSel.value === '5'){
     alert('Insira um valor no campo Tratores');
-
-    
   } else{
     idBotao.addEventListener("click", abreModal);
 
@@ -80,5 +81,7 @@ function resetaCampos(){
   produtosSel.value = "3";
   insumosSel.value = "4";
   tratoresSel.value = "5";
+  window.location.reload()
 }
+
 
