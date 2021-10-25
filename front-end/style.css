@@ -670,16 +670,16 @@ progress {
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) * -.5);
-  margin-left: calc(var(--bs-gutter-x) * -.5);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
 }
 
 .row > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -11845,13 +11845,10 @@ header .header .nav ul li {
 .body .area_login .campo_login .foto_login {
   width: 140px;
   height: 140px;
-  margin: 80px auto 100px auto;
+  margin: 100px auto 100px auto;
   border: 3px solid #28922c;
   border-radius: 130px;
   background: url(..//front-end/img/user_img.png);
-}
-.body .area_login .campo_login .texto-login p {
-  text-transform: uppercase;
 }
 .body .area_login .campo_login .btn_login {
   display: flex;
@@ -11859,7 +11856,7 @@ header .header .nav ul li {
   width: 300px;
   height: 60px;
   opacity: 90%;
-  margin: 100px auto 0 auto;
+  margin: 60px auto 40px auto;
   background: #242424;
   border-radius: 30px;
   border: 3px solid #28922c;
@@ -11872,9 +11869,20 @@ header .header .nav ul li {
   font-weight: bold;
   align-self: center;
 }
+.body .area_login .campo_login .btn_login:hover {
+  border-color: #fff;
+  transition: 0.3s;
+}
+.body .area_login .campo_login .btn_login:hover p {
+  color: #FFFFFF;
+  transition: 0.3s;
+}
 .body .area_login .campo_login .autentica {
-  text-decoration: none;
-  text-align: center;
+  text-decoration: underline;
+}
+.body .area_login .campo_login .autentica:hover {
+  color: #FFFFFF;
+  transition: 0.3s;
 }
 
 .body {
@@ -11896,7 +11904,7 @@ header .header .nav ul li {
   border: 3px solid #28922c;
 }
 .body .area__login__campo__texto-login p {
-  display: block;
+  display: none;
   color: red;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
@@ -11907,7 +11915,7 @@ header .header .nav ul li {
 .body .area__login__campo__foto-login {
   width: 140px;
   height: 140px;
-  margin: 80px auto 80px auto;
+  margin: 80px auto 30px auto;
   border: 3px solid #28922c;
   border-radius: 130px;
   background: url(..//front-end/img/user_img.png);
@@ -11919,6 +11927,33 @@ header .header .nav ul li {
 .body .area__login__campo__senha-user {
   display: flex;
   place-content: center;
+}
+.body .area__login__campo .btn_login {
+  display: flex;
+  place-content: center;
+  width: 300px;
+  height: 60px;
+  opacity: 90%;
+  margin: 60px auto 40px auto;
+  background: #242424;
+  border-radius: 30px;
+  border: 3px solid #28922c;
+  cursor: pointer;
+}
+.body .area__login__campo .btn_login p {
+  color: #28922c;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  align-self: center;
+}
+.body .area__login__campo .btn_login:hover {
+  border-color: #fff;
+  transition: 0.3s;
+}
+.body .area__login__campo .btn_login:hover p {
+  color: #FFFFFF;
+  transition: 0.3s;
 }
 
 #login::placeholder,
@@ -12047,20 +12082,20 @@ main .user1__pesquisa .user1__form form label {
 main .user1__pesquisa .user1__form form select {
   width: 580px;
   height: 50px;
-  background: #FFFFFF;
-  border: 3px solid #28922C;
+  background: #ffffff;
+  border: 3px solid #28922c;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
 main .user1__pesquisa .user1__btn {
-  padding-left: 628PX;
+  padding-left: 628px;
 }
 main .user1__pesquisa .user1__btn .user1__btn__search {
   width: 327px;
   height: 40px;
-  background: #FFFFFF;
-  border: 3px solid #28922C;
+  background: #ffffff;
+  border: 3px solid #28922c;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;

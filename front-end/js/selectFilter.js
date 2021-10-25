@@ -17,7 +17,6 @@ let insumosSel = document.getElementById("insumos");
 let tratoresSel = document.getElementById("tratores");
 
 // Carremento dos selects
-console.log(window.onload)
 window.onload = function() {
 
   
@@ -67,6 +66,8 @@ botao.addEventListener('click', (e) => {
     let endereco = enderecoSel.value;
     let produtos = produtosSel.value;
     let insumos = insumosSel.value;
+
+    
     let tratores = tratoresSel.value;
 
     let td = document.createElement("td");
@@ -76,11 +77,6 @@ botao.addEventListener('click', (e) => {
 });
 
 function resetaCampos(){
-  locaisSel.value = "1";
-  enderecoSel.value = "2";
-  produtosSel.value = "3";
-  insumosSel.value = "4";
-  tratoresSel.value = "5";
   window.location.reload()
 }
 

@@ -24,15 +24,10 @@
       .foto_login {
         width: 140px;
         height: 140px;
-        margin: 80px auto 100px auto;
+        margin: 100px auto 100px auto;
         border: 3px solid $primary-color;
         border-radius: 130px;
         background: url(..//front-end/img/user_img.png);
-      }
-      .texto-login {
-        p {
-          text-transform: uppercase;
-        }
       }
       .btn_login {
         display: flex;
@@ -40,7 +35,7 @@
         width: 300px;
         height: 60px;
         opacity: 90%;
-        margin: 100px auto 0 auto;
+        margin: 60px auto 40px auto;
         background: $bg-color;
         border-radius: 30px;
         border: 3px solid $primary-color;
@@ -50,12 +45,21 @@
           @include fontes(16);
         }
       }
+      .btn_login:hover {
+        border-color: #fff;
+        transition: 0.3s;
+      }
+      .btn_login:hover p {
+        color: $textColor1;
+        transition: 0.3s;
+      }
       .autentica {
-        text-decoration: none;
-        text-align: center;
+        text-decoration: underline;
+      }
+      .autentica:hover {
+        color: $textColor1;
+        transition: 0.3s;
       }
     }
   }
 }
-
-

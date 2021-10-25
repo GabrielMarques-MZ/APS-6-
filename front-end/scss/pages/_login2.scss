@@ -15,7 +15,7 @@
       border: 3px solid #28922c;
       &__texto-login {
         p {
-          display: block;
+          display: none;
           color: red;
           font-family: "Roboto", Arial, Helvetica, sans-serif;
           text-transform: uppercase;
@@ -27,7 +27,7 @@
       &__foto-login {
         width: 140px;
         height: 140px;
-        margin: 80px auto 80px auto;
+        margin: 80px auto 30px auto;
         border: 3px solid #28922c;
         border-radius: 130px;
         background: url(..//front-end/img/user_img.png);
@@ -39,6 +39,30 @@
       &__senha-user {
         display: flex;
         place-content: center;
+      }
+      .btn_login {
+        display: flex;
+        place-content: center;
+        width: 300px;
+        height: 60px;
+        opacity: 90%;
+        margin: 60px auto 40px auto;
+        background: $bg-color;
+        border-radius: 30px;
+        border: 3px solid $primary-color;
+        cursor: pointer;
+        p {
+          color: $primary-color;
+          @include fontes(16);
+        }
+      }
+      .btn_login:hover {
+        border-color: #fff;
+        transition: 0.3s;
+      }
+      .btn_login:hover p {
+        color: $textColor1;
+        transition: 0.3s;
       }
     }
   }
