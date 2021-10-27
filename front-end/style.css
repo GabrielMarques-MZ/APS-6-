@@ -12212,14 +12212,19 @@ main .user1__pesquisa .user1__btn .user1__btn__search {
   width: 50px;
   font-size: 20px;
   font-weight: bold;
-  background: #fff;
+  background: #0F7421;
+  color: #fff;
+  border: 1px solid black;
 }
 #modal-mensagem .modal-content {
-  border-radius: 30px;
+  border: 3px solid #fff;
   background: #28922c;
+  border-radius: 30px;
   width: 200%;
+  margin-left: -130px;
 }
 #modal-mensagem .modal-content .modal-body .table {
+  background: #0F7421;
   color: #fff;
   border: 1px solid black;
 }
@@ -12231,27 +12236,27 @@ main .user1__pesquisa .user1__btn .user1__btn__search {
   padding: 10px;
   border: 1px solid black;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 38px;
   font-style: normal;
   font-weight: bold;
-  font-size: 38px;
-  line-height: 52px;
+  font-size: 24px;
+  line-height: 30px;
 }
 #modal-mensagem .modal-content .modal-body .table tbody tr td {
   text-align: center;
   border: 1px solid black;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 24px;
   font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 33px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
 }
 #modal-mensagem .modal-content .modal-footer {
   border: none;
 }
 #modal-mensagem .modal-content .modal-footer button {
-  background: #fff;
+  border: 1px solid black;
+  background: #0F7421;
+  color: #fff;
   border-radius: 4px;
   font-size: 20px;
   font-weight: bold;
