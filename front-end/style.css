@@ -12013,11 +12013,6 @@ header .header__logo h1 {
 }
 header .header__logo h1 span {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 38px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 52px;
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
@@ -12069,11 +12064,6 @@ main .user1__pesquisa .user1__form form {
 }
 main .user1__pesquisa .user1__form form label {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 38px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 52px;
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
@@ -12152,11 +12142,6 @@ main .user1__pesquisa .user1__btn .user1__btn__search {
 }
 .user3 .user1__pesquisa .user1__form form label {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-size: 38px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 38px;
-  line-height: 52px;
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
@@ -12219,8 +12204,57 @@ main .user1__pesquisa .user1__btn .user1__btn__search {
   align-items: center;
 }
 
-.table {
+#modal-mensagem .modal-header {
+  border: none;
+}
+#modal-mensagem .modal-header button {
+  border-radius: 4px;
+  width: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  background: #fff;
+}
+#modal-mensagem .modal-content {
+  border-radius: 30px;
+  background: #28922c;
+  width: 200%;
+}
+#modal-mensagem .modal-content .modal-body .table {
+  color: #fff;
   border: 1px solid black;
+}
+#modal-mensagem .modal-content .modal-body .table thead {
+  border: 1px solid black;
+}
+#modal-mensagem .modal-content .modal-body .table thead tr th {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid black;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 52px;
+}
+#modal-mensagem .modal-content .modal-body .table tbody tr td {
+  text-align: center;
+  border: 1px solid black;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+}
+#modal-mensagem .modal-content .modal-footer {
+  border: none;
+}
+#modal-mensagem .modal-content .modal-footer button {
+  background: #fff;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .section__two {

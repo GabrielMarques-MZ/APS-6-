@@ -194,8 +194,58 @@ main {
   
 }
 
-.table {
-  border: 1px solid black;
+#modal-mensagem {
+  .modal-header {
+    border: none;
+    button {
+      border-radius: 4px;
+      width: 50px;
+      font-size: 20px;
+      font-weight: bold;
+      background: #fff;
+    }
+  }
+  .modal-content {
+    border-radius: 30px;
+    background: $primary-color;
+    width: 200%;
+    .modal-body {
+      
+      .table {
+        color: #fff;
+        border: 1px solid black;
+        thead {
+          border: 1px solid black;
+          tr {
+            th {
+              text-align: center;
+              padding: 10px;
+              border: 1px solid black;
+              @include fontes(38.1);
+            }
+          }
+        }
+        tbody {
+          tr {
+            td {
+              text-align: center;
+              border: 1px solid black;
+              @include fontes(24);
+            }
+          }
+        }
+      }
+    }
+    .modal-footer {
+      border: none;
+      button {
+        background: #fff;
+        border-radius: 4px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 .section__two {
