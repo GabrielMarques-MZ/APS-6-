@@ -14,10 +14,10 @@
 </head>
 <body class="body">
   <div class="area__login">
-    <div class="area__login__campo">
-      <div class="area__login__campo__foto-login"></div>
-      <div class="area__login__campo__texto-login">
-        <p>Autenticação Negada</p>
+    <div class="area__login__campo" id="campo_login">
+      <div class="area__login__campo__foto-login" id="foto_login"></div>
+      <div class="area__login__campo__texto-login" ">
+        <p id="texto_login">Autenticação Negada</p>
       </div>
       <div class="area__login__campo__login-user">
         <input type="text" name="login" id="login" placeholder="Usuário" required>
@@ -25,7 +25,7 @@
       <div class="area__login__campo__senha-user">
         <input type="password" name="senha" id="senha" placeholder="Senha" required>
       </div>
-      <div class="btn_login" onclick="realizaLogin()">
+      <div class="btn_login" onclick="realizaLogin()" id="btn_login">
         <p>LOGIN</p>
       </div>
     </div>

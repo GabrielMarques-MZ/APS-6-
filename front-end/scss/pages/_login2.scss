@@ -23,6 +23,22 @@
           font-weight: bold;
           text-align: center;
         }
+        @keyframes pisca {
+          0% {
+            opacity: 0.2;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0.2;
+          }
+        }
+        .pisca {
+          animation-name: pisca;
+          animation-duration: 1.2s;
+          animation-iteration-count: infinite;
+        }
       }
       &__foto-login {
         width: 140px;

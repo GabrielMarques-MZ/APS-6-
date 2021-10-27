@@ -17,7 +17,12 @@ const usuarios = {
 let campoUsuario = document.getElementById("login")
 let campoSenha = document.getElementById("senha")
 let botaoLogin = document.querySelector(".btn_login")
-
+let textLogin = document.getElementById("texto_login")
+let pegaCampo = document.getElementById("campo_login");
+let pegaFoto = document.getElementById("foto_login");
+let pegaBtn = document.getElementById("btn_login");
+let pegaBtnText = document.querySelector(".btn_login p");
+console.log(pegaBtnText);
 
 
 
@@ -38,19 +43,27 @@ function realizaLogin(){
 
   if(campoUser === ""){
     alert("Insira seu usuário")
+    window.location.reload()
   }else if(campoPassword === ""){
     alert("Insira sua senha")
-  }
-    
-  if(campoUser.toLowerCase() === valueUser1 && campoPassword.toLowerCase() === valuePassword1){
+    window.location.reload()
+  }else if(campoUser.toLowerCase() === valueUser1 && campoPassword.toLowerCase() === valuePassword1){
       location.href = "/front-end/user1.html"
     }else if (campoUser.toLowerCase() === valueUser2 && campoPassword.toLowerCase() === valuePassword2){
       location.href = "/front-end/user2.html"
     }else if (campoUser.toLowerCase() === valueUser3 && campoPassword.toLowerCase() === valuePassword3){
       location.href = "/front-end/user3.html"
     }else if(campoUser !== "" && campoPassword !== ""){
-        alert("Usuário ou senha incorretos")
-        window.location.reload()
+      alert("Usuário ou senha incorretos");
+      textLogin.style.display = "block";
+      textLogin.classList.add("pisca");
+      pegaCampo.style.borderColor = "red";
+      pegaFoto.style.borderColor = "red";
+      pegaBtn.style.borderColor = "red";
+      pegaBtnText.style.color = "#FFF";
+      campoUsuario.style.borderColor = "red";
+      campoSenha.style.borderColor = "red";
+
     }
   }
 
