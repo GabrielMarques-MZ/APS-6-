@@ -12093,13 +12093,16 @@ main .user1__pesquisa .user1__form .check__conteudo__item input {
   border: 3px solid #28922C;
   box-sizing: border-box;
   width: 50px;
-  height: 25px;
+  height: 20px;
+}
+main .user1__pesquisa .user1__form .check__conteudo__item label {
+  font-size: 20px !important;
 }
 main .user1__pesquisa .user1__btn {
-  padding-left: 628px;
+  padding-left: 740px;
 }
 main .user1__pesquisa .user1__btn .user1__btn__search {
-  width: 327px;
+  width: 220px;
   height: 40px;
   background: #ffffff;
   border: 3px solid #28922c;
@@ -12171,7 +12174,10 @@ main .user1__pesquisa .user1__btn .user1__btn__search {
   border: 3px solid #28922C;
   box-sizing: border-box;
   width: 50px;
-  height: 25px;
+  height: 20px;
+}
+.user3 .user1__pesquisa .user1__form .check__conteudo__item label {
+  font-size: 20px !important;
 }
 .user3 .user1__pesquisa .user1__form .check {
   display: flex;
@@ -12188,13 +12194,16 @@ main .user1__pesquisa .user1__btn .user1__btn__search {
   border: 3px solid #28922C;
   box-sizing: border-box;
   width: 50px;
-  height: 25px;
+  height: 20px;
+}
+.user3 .user1__pesquisa .user1__form .check__agro__item label {
+  font-size: 20px !important;
 }
 .user3 .user1__pesquisa .user1__btn {
-  padding-left: 628px;
+  padding-left: 740px;
 }
 .user3 .user1__pesquisa .user1__btn .user1__btn__search {
-  width: 327px;
+  width: 220px;
   height: 40px;
   background: #ffffff;
   border: 3px solid #28922c;
