@@ -12180,6 +12180,7 @@ main .user1__pesquisa .user1__btn .user1__btn__search {
   font-size: 20px !important;
 }
 .user3 .user1__pesquisa .user1__form .check {
+  padding-top: 15px;
   display: flex;
   justify-content: normal !important;
 }

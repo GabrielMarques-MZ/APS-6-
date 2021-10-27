@@ -163,6 +163,7 @@ main {
         }
       }
       .check {
+        padding-top: 15px;
         display: flex;
         justify-content: normal !important;
         &__agro{
@@ -221,7 +222,6 @@ main {
     width: 200%;
     margin-left: -130px;
     .modal-body {
-      
       .table {
         background: $bg-header;
         color: #fff;
