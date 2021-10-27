@@ -12079,6 +12079,7 @@ main .user1__pesquisa .user1__form form select {
   border-radius: 20px;
 }
 main .user1__pesquisa .user1__form .check {
+  padding-top: 15px;
   display: flex;
   justify-content: normal !important;
 }
@@ -12160,6 +12161,7 @@ main .user1__pesquisa .user1__btn .user1__btn__search {
   border-radius: 20px;
 }
 .user3 .user1__pesquisa .user1__form .check {
+  padding-top: 15px;
   display: flex;
   justify-content: normal !important;
 }
