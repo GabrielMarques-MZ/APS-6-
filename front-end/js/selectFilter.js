@@ -118,9 +118,20 @@ form.addEventListener('submit', event => {
   console.log('tratores', tratores.value)
 
   const checkBoxValues = Array.from(document.querySelectorAll('input[type=checkbox]:checked'))
-    .map(item => (item.value))
+    .map(item => ({
+      name: item.name,
+      value: +item.value
+    }))
   
   console.log('array com valores do checkbox', checkBoxValues)
+
+  const itr = checkBoxValues.find(({ name }) => name === 'itr')
+  const irpf = checkBoxValues.find(({ name }) => name === 'irpf')
+  const iss = checkBoxValues.find(({ name }) => name === 'iss')
+
+  const calculo = itr.value * irpf.value
+
+  console.log(calculo)
   
   let td = document.createElement("td");
   tabela.innerHTML =  `
@@ -129,7 +140,7 @@ form.addEventListener('submit', event => {
     <td>${produtos.value}</td>
     <td>${insumos.value}</td>
     <td>${tratores.value}</td>
-    <td>${checkBoxValues}</td>
+    <td>${calculo}</td>
   `;
   tabela.append(td);
   abreModal()
