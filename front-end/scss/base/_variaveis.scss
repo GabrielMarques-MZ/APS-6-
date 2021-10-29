@@ -1,9 +1,19 @@
 // Cores
 $primary-color: #28922c;
-$bg-header: #0F7421;
+$bg-header: linear-gradient(
+  335deg,
+  #85af3e 0,
+  #6ea83a 16.67%,
+  #519f34 33.33%,
+  #27922b 50%,
+  #008525 66.67%,
+  #007b24 83.33%,
+  #007328 100%
+);
 $bg-color: #242424;
-$textColor1: #FFFFFF;
-$text-error: red;
+$textColor1: #ffffff;
+$text-error: #de3535;
+$text-gray: #8a8a8a;
 
 // Fonte
 $font-1: "Roboto", Arial, Helvetica, sans-serif;

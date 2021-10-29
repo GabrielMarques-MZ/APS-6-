@@ -49,21 +49,25 @@ function realizaLogin(){
     window.location.reload()
   }else if(campoUser.toLowerCase() === valueUser1 && campoPassword.toLowerCase() === valuePassword1){
       location.href = "/front-end/user1.html"
+      sessionStorage.setItem("auth", valueUser1);
     }else if (campoUser.toLowerCase() === valueUser2 && campoPassword.toLowerCase() === valuePassword2){
       location.href = "/front-end/user2.html"
+      sessionStorage.setItem("auth", valueUser2);
     }else if (campoUser.toLowerCase() === valueUser3 && campoPassword.toLowerCase() === valuePassword3){
       location.href = "/front-end/user3.html"
+      sessionStorage.setItem("auth", valueUser3);
     }else if(campoUser !== "" && campoPassword !== ""){
       alert("Usuário ou senha incorretos");
       textLogin.style.display = "block";
       textLogin.classList.add("pisca");
-      pegaCampo.style.borderColor = "red";
-      pegaFoto.style.borderColor = "red";
-      pegaBtn.style.borderColor = "red";
+      pegaCampo.style.borderColor = "#de3535";
+      pegaFoto.style.borderColor = "#de3535";
+      pegaBtn.style.borderColor = "#de3535";
       pegaBtnText.style.color = "#FFF";
-      campoUsuario.style.borderColor = "red";
-      campoSenha.style.borderColor = "red";
+      campoUsuario.style.borderColor = "#de3535";
+      campoSenha.style.borderColor = "#de3535";
 
     }
   }
 
+//sessionStorage.clear();

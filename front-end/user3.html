@@ -8,6 +8,9 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <script>
+        if(!sessionStorage.auth) location.href = "/front-end/login.html"
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
@@ -21,125 +24,126 @@
                 </div>
                 <div class="header__user">
                     <img src="img/user_img.png" alt="">
-                    <span>Bem vindo {user}</span>
+                    <span>Bem vindo Ministro</span>
                 </div>
             </div>
         </div>
     </header>
    
-    <main class="user3">
-        <div class="user1__pesquisa">
-            <div class="user1__form">
-                <form name="form1" id="form1" action="/action_page.php">
-                    <label for="locais">Localização</label>
-                    <select name="locais" id="locais">
-                      <option value="1">-- Selecione a Localização --</option>
-                    </select>
-                  </form>
-                <form >
-                    <label for="endereco">Endereço</label> 
-                    <select name="endereco" id="endereco">
-                      <option value="2">-- Selecione o Endereço --</option>
-                    </select>
-                </form>
-                <form >
-                    <label for="produtos">Produtos</label> 
-                    <select name="produtos" id="produtos">
-                        <option value="3" >-- Selecione um Produto --</option>
-                        <option value="Teste 1" >Produtos 1</option>
-                        <option value="Teste 2" >Produtos 2</option>
-                    </select>
-                </form>
-                <form >
-                    <label for="insumos">Insumos</label>
-                    <select name="insumos" id="insumos">
-                        <option value="4" >-- Selecione um Insumos --</option>
-                        <option value="Teste 1" >Insumos 1</option>
-                        <option value="Teste 2" >Insumos 2</option>
-                      </select>
-                </form>
-                <form >
-                    <label for="tratores">Tratores</label>
-                    <select name="tratores" id="tratores">
-                        <option value="5" >-- Selecione um Tratores --</option>
-                        <option value="Tem">Tem</option>
-                        <option value="Não Tem" >Não Tem</option>
-                      </select>
-                </form>
-                <form class="check">
-                    <label>Imposto</label>
-                    <div class="check__conteudo">
-                        <div class="check__conteudo__item">
-                            <input type="checkbox" name="" id="">
-                            <label>ITR</label>
-                        </div>
-                        <div class="check__conteudo__item">
-                            <input type="checkbox" name="" id="">
-                            <label>IRPF</label>
-                            
-                        </div>
-                        <div class="check__conteudo__item">
-                            <input type="checkbox" name="" id="">
-                            <label>ISS</label>
-                        </div>
-                    </div>
-                </form>
-                <form class="check">
-                    <label>Agrotóxico</label>
-                    <div class="check__agro">
-                        <div class="check__agro__item">
-                            <input type="checkbox" name="" id="">
-                            <label>Herbicidas</label>
-                        </div>
-                        <div class="check__agro__item">
-                            <input type="checkbox" name="" id="">
-                            <label>Inseticidas</label>
-                            
-                        </div>
-                        <div class="check__agro__item">
-                            <input type="checkbox" name="" id="">
-                            <label>Fungicidas</label>
-                        </div>
-                    </div>
-                </form>
+    <main class="form">
+        <form name="form1" id="form1" action="/action_page.php">
+            <div class="form__group">
+                <label for="locais">Localização</label>
+                <select name="locais" id="locais">
+                    <option value="1">-- Selecione a Localização --</option>
+                </select>
             </div>
-            <div class="modal fade" id="modal-mensagem">
-            <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-                        </div>
-                        <div class="modal-body">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Localização</th>
-                                        <th>Endereço</th>
-                                        <th>Produtos</th>
-                                        <th>Insumos</th>
-                                        <th>Tratores</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tabela">
 
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="resetaCampos()">Fechar</button>
-                        </div>
+            <div class="form__group">
+                <label for="endereco">Endereço</label> 
+                <select name="endereco" id="endereco">
+                    <option value="2">-- Selecione o Endereço --</option>
+                </select>
+            </div>
+
+            <div class="form__group">
+                <label for="produtos">Produtos</label> 
+                <select name="produtos" id="produtos">
+                    <option value="3" >-- Selecione um Produto --</option>
+                    <option value="Teste 1" >Produtos 1</option>
+                    <option value="Teste 2" >Produtos 2</option>
+                </select>
+            </div>
+
+            <div class="form__group">
+                <label for="insumos">Insumos</label>
+                <select name="insumos" id="insumos">
+                    <option value="4" >-- Selecione um Insumo --</option>
+                    <option value="Teste 1" >Insumos 1</option>
+                    <option value="Teste 2" >Insumos 2</option>
+                </select>
+            </div>
+
+            <div class="form__group">
+                <label for="tratores">Tratores</label>
+                <select name="tratores" id="tratores">
+                    <option value="5" >-- Selecione um Trator --</option>
+                    <option value="Tem">Tem</option>
+                    <option value="Não Tem" >Não Tem</option>
+                </select>
+            </div>
+
+            <div class="form__group">
+                <label>Imposto</label>
+                <div class="checkbox" name="imposto">
+                    <div class="checkbox__item">
+                        <input type="checkbox" name="" id="" value=2>
+                        <label>ITR</label>
+                    </div>
+                    <div class="checkbox__item">
+                        <input type="checkbox" name="" id="" value=4>
+                        <label>IRPF</label>
+                        
+                    </div>
+                    <div class="checkbox__item">
+                        <input type="checkbox" name="" id="" value=8>
+                        <label>ISS</label>
                     </div>
                 </div>
             </div>
-            <div class="user1__btn">
-                <button id="botao" class="user1__btn__search" onclick="abreModal()">
-                    Pesquisar
-                </button>
+
+            <div class="form__group">
+                <label>Agrotóxico</label>
+                <div class="checkbox" name="agrotoxico">
+                    <div class="checkbox__item">
+                        <input type="checkbox" name="" id="" value=10>
+                        <label>Herbicidas</label>
+                    </div>
+                    <div class="checkbox__item">
+                        <input type="checkbox" name="" id="" value=20>
+                        <label>Inseticidas</label>
+                        
+                    </div>
+                    <div class="checkbox__item">
+                        <input type="checkbox" name="" id="" value=40>
+                        <label>Fungicidas</label>
+                    </div>
+                </div>
+            </div>
+            <button class="search__button" type="submit">
+                Pesquisar
+            </button>
+        <div class="modal fade" id="modal-mensagem">
+        <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Localização</th>
+                                    <th>Endereço</th>
+                                    <th>Produtos</th>
+                                    <th>Insumos</th>
+                                    <th>Tratores</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="resetaCampos()">Fechar</button>
+                    </div>
+                </div>
             </div>
         </div>
+    </form>
     </main>
     <script src="js/popup.js"></script>
     <script src="js/selectFilter.js"></script>
-</body>
 </body>
 </html>

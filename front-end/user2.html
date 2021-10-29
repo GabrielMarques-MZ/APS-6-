@@ -7,7 +7,9 @@
     <title>User 2</title>
 
     <link rel="stylesheet" href="style.css">
-
+    <script>
+        if(!sessionStorage.auth) location.href = "/front-end/login.html"
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
@@ -21,7 +23,7 @@
                 </div>
                 <div class="header__user">
                     <img src="img/user_img.png" alt="">
-                    <span>Bem vindo {user}</span>
+                    <span>Bem vindo Diretor</span>
                 </div>
             </div>
         </div>
@@ -53,7 +55,7 @@
                 <form >
                     <label for="insumos">Insumos</label>
                     <select name="insumos" id="insumos">
-                        <option value="4" >-- Selecione um Insumos --</option>
+                        <option value="4" >-- Selecione um Insumo --</option>
                         <option value="Teste 1" >Insumos 1</option>
                         <option value="Teste 2" >Insumos 2</option>
                       </select>
@@ -61,7 +63,7 @@
                 <form >
                     <label for="tratores">Tratores</label>
                     <select name="tratores" id="tratores">
-                        <option value="5" >-- Selecione um Tratores --</option>
+                        <option value="5" >-- Selecione um Trator --</option>
                         <option value="Tem">Tem</option>
                         <option value="Não Tem" >Não Tem</option>
                       </select>
@@ -122,6 +124,5 @@
     </main>
     <script src="js/popup.js"></script>
     <script src="js/selectFilter.js"></script>
-</body>
 </body>
 </html>

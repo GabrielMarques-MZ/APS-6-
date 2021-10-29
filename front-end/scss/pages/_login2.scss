@@ -10,13 +10,13 @@
       width: 450px;
       height: 600px;
       border-radius: 130px;
-      background-color: #242424;
+      background-color: $bg-color;
       opacity: 90%;
-      border: 3px solid #28922c;
+      border: 3px solid $primary-color;
       &__texto-login {
         p {
           display: none;
-          color: red;
+          color: $text-error;
           font-family: "Roboto", Arial, Helvetica, sans-serif;
           text-transform: uppercase;
           font-size: 20px;
@@ -44,7 +44,7 @@
         width: 140px;
         height: 140px;
         margin: 80px auto 30px auto;
-        border: 3px solid #28922c;
+        border: 3px solid $primary-color;
         border-radius: 130px;
         background: url(..//front-end/img/user_img.png);
       }
@@ -73,7 +73,7 @@
         }
       }
       .btn_login:hover {
-        border-color: #fff;
+        border-color: $textColor1;
         transition: 0.3s;
       }
       .btn_login:hover p {
@@ -86,7 +86,7 @@
 
 #login::placeholder,
 #senha::placeholder {
-  color: #8a8a8a;
+  color: $text-gray;
 }
 
 #login {
@@ -95,13 +95,13 @@
   font-size: 16px;
   background: none;
   border: none;
-  border-bottom: 3px solid #28922c;
+  border-bottom: 3px solid $primary-color;
   width: 220px;
   margin-top: 40px;
   background-image: url(/front-end/img/user_icon.png);
   background-repeat: no-repeat;
   outline: none;
-  color: #fff;
+  color: $textColor1;
 }
 
 #senha {
@@ -110,11 +110,11 @@
   font-size: 16px;
   background: none;
   border: none;
-  border-bottom: 3px solid #28922c;
+  border-bottom: 3px solid $primary-color;
   width: 220px;
   margin-top: 40px;
   background-image: url(/front-end/img/lock_icon.png);
   background-repeat: no-repeat;
   outline: none;
-  color: #fff;
+  color: $textColor1;
 }
