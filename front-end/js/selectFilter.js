@@ -46,38 +46,6 @@ let botao = document.getElementById('botao');
 let tabela = document.getElementById('tabela');
 let idBotao = document.getElementById("botao")
 
-// // Verifica se existem campos vazios
-// botao.addEventListener('click', (e) => {
-//   if (locaisSel.value === '1') {
-//     alert('Insira um valor no campo Localização');
-//   } else if (enderecoSel.value === '2'){
-//       alert('Insira um valor no campo Endereço');
-//   } else if (produtosSel.value === '3'){
-//     alert('Insira um valor no campo Produtos');
-//   } else if (insumosSel.value === '4'){
-//     alert('Insira um valor no campo Insumos');
-//   } else if (tratoresSel.value === '5'){
-//     alert('Insira um valor no campo Tratores');
-//   } else{
-//     idBotao.addEventListener("click", abreModal);]
-
-//    
-
-//     e.preventDefault();
-
-//     let locais = locaisSel.value;
-//     let endereco = enderecoSel.value;
-//     let produtos = produtosSel.value;
-//     let insumos = insumosSel.value;
-
-    
-//     let tratores = tratoresSel.value;
-
-//     let td = document.createElement("td");
-//     tabela.innerHTML =  `<td>${locais}</td><td>${endereco}</td><td>${produtos}</td><td>${insumos}</td><td>${tratores}</td>` ;
-//     tabela.append(td);
-//   }
-// });
 
 function resetaCampos(){
   window.location.reload()
@@ -85,18 +53,6 @@ function resetaCampos(){
 
 
 const form = document.forms.form1
-
-// let allCheckBox = document.querySelectorAll('.checkbox')
-
-// const valueAgrotoxico = allCheckBox.forEach((checkbox) => { 
-//   checkbox.addEventListener('change', (event) => {
-//     if (event.target.checked) {
-//       var agrotoxicos = event.target.checked
-//       return agrotoxicos
-//     }
-//   })
-  
-// })
 
 form.addEventListener('submit', event => {
   event.preventDefault()
@@ -131,7 +87,7 @@ form.addEventListener('submit', event => {
 
   const calculo = itr.value * irpf.value
 
-  console.log(calculo)
+  console.log('calculo', calculo)
   
   let td = document.createElement("td");
   tabela.innerHTML =  `
