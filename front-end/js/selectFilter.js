@@ -18,6 +18,7 @@ let tratoresSel = document.getElementById("tratores");
 
 
 function abreModal(){
+  console.log('abrindo modal')
   $("#modal-mensagem").modal('toggle');
 }
 
@@ -41,9 +42,9 @@ window.onload = function() {
 
 
 // // Recebimento dos dados do formulario
-// let botao = document.getElementById('botao');
-// let tabela = document.getElementById('tabela');
-// let idBotao = document.getElementById("botao")
+let botao = document.getElementById('botao');
+let tabela = document.getElementById('tabela');
+let idBotao = document.getElementById("botao")
 
 // // Verifica se existem campos vazios
 // botao.addEventListener('click', (e) => {
@@ -85,9 +86,21 @@ function resetaCampos(){
 
 const form = document.forms.form1
 
+// let allCheckBox = document.querySelectorAll('.checkbox')
+
+// const valueAgrotoxico = allCheckBox.forEach((checkbox) => { 
+//   checkbox.addEventListener('change', (event) => {
+//     if (event.target.checked) {
+//       var agrotoxicos = event.target.checked
+//       return agrotoxicos
+//     }
+//   })
+  
+// })
+
 form.addEventListener('submit', event => {
   event.preventDefault()
-  const { locais, endereco, produtos, insumos, tratores, imposto, agrotoxico } = form
+  const { locais, endereco, produtos, insumos, tratores } = form
 
   if (locais.value === "1"
       || endereco.value === "2"
@@ -104,8 +117,10 @@ form.addEventListener('submit', event => {
   console.log('insumos', insumos.value)
   console.log('tratores', tratores.value)
 
-
+  console.log(tabela)
+  
   let td = document.createElement("td");
+  console.log(td)
   tabela.innerHTML =  `
     <td>${locais.value}</td>
     <td>${endereco.value}</td>
@@ -116,5 +131,3 @@ form.addEventListener('submit', event => {
   tabela.append(td);
   abreModal()
 })
-
-

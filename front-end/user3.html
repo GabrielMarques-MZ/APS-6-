@@ -96,16 +96,16 @@
                 <label>Agrotóxico</label>
                 <div class="checkbox" name="agrotoxico">
                     <div class="checkbox__item">
-                        <input type="checkbox" name="" id="" value=10>
+                        <input type="checkbox" onchange="getValue(this.value)" name="firstValue" id="" value=10>
                         <label>Herbicidas</label>
                     </div>
                     <div class="checkbox__item">
-                        <input type="checkbox" name="" id="" value=20>
+                        <input type="checkbox" onchange="getValue(this.value)" name="" id="" value=20>
                         <label>Inseticidas</label>
                         
                     </div>
                     <div class="checkbox__item">
-                        <input type="checkbox" name="" id="" value=40>
+                        <input type="checkbox" onchange="getValue(this.value)" name="" id="" value=40>
                         <label>Fungicidas</label>
                     </div>
                 </div>
@@ -113,7 +113,10 @@
             <button class="search__button" type="submit">
                 Pesquisar
             </button>
-        <div class="modal fade" id="modal-mensagem">
+        
+    </form>
+
+    <div class="modal fade" id="modal-mensagem">
         <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -136,12 +139,19 @@
                         </table>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="resetaCampos()">Fechar</button>
+                        <button
+                        type="button"
+                        class="btn btn-default"
+                        data-dismiss="modal"
+                        onclick="resetaCampos()"
+                    >
+                        Fechar
+                    </button>
+
                     </div>
                 </div>
             </div>
         </div>
-    </form>
     </main>
     <script src="js/popup.js"></script>
     <script src="js/selectFilter.js"></script>
