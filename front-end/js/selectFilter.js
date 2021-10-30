@@ -73,22 +73,45 @@ form.addEventListener('submit', event => {
   console.log('insumos', insumos.value)
   console.log('tratores', tratores.value)
 
-  const checkBoxValues = Array.from(document.querySelectorAll('input[type=checkbox]:checked'))
-    .map(item => ({
-      name: item.name,
-      value: +item.value
-    }))
+  // const checkBoxValues = Array.from(document.querySelectorAll('input[type=checkbox]:checked'))
+  //   .map(item => ({
+  //     name: item.name,
+  //     value: +item.value
+  //   })
+  // )
+
+  let form1 = document.querySelector('.form');
+  let imposto = form1.name.value;
+  console.log(imposto)
+  // const pegaValor = document.querySelector('input#imposto[type=checkbox]:checked');
+  // console.log(pegaValor);
+
+  // const checkBoxValuesImposto = Array.from(document.getElementById('#imposto[type=checkbox]:checked'))
+  //   .map(item => ({
+  //     name: item.name,
+  //     value: +item.value
+  //   })
+  // )
+
+  // const checkBoxValuesAgro = Array.from(document.getElementById('#agro[type=checkbox]:checked'))
+  //   .map(item => ({
+  //     name: item.name,
+  //     value: +item.value
+  //   })
+  // )
+
+  // console.log('array com valores do checkbox', checkBoxValuesImposto);
+  // console.log('array com valores do checkbox', checkBoxValuesAgro);
+
+  // const impostos = checkBoxValuesImposto.find(({ name }) => name === 'itr' ||  'irpf' || 'iss');
+  // const agrotoxicos = checkBoxValuesAgro.find(({ name }) => name === 'herbicidas' ||  'inseticidas' || 'fungicidas');
+
+  // const imposto = impostos.name;
+  // console.log('agrotoxico', imposto);
   
-  console.log('array com valores do checkbox', checkBoxValues)
+  // const agrotoxico = agrotoxicos.name;
+  // console.log('agrotoxico', agrotoxico);
 
-  const itr = checkBoxValues.find(({ name }) => name === 'itr')
-  const irpf = checkBoxValues.find(({ name }) => name === 'irpf')
-  const iss = checkBoxValues.find(({ name }) => name === 'iss')
-
-  const calculo = itr.value * irpf.value
-
-  console.log('calculo', calculo)
-  
   let td = document.createElement("td");
   tabela.innerHTML =  `
     <td>${locais.value}</td>
@@ -96,7 +119,6 @@ form.addEventListener('submit', event => {
     <td>${produtos.value}</td>
     <td>${insumos.value}</td>
     <td>${tratores.value}</td>
-    <td>${calculo}</td>
   `;
   tabela.append(td);
   abreModal()
