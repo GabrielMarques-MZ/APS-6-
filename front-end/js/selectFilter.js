@@ -73,44 +73,31 @@ form.addEventListener('submit', event => {
   console.log('insumos', insumos.value)
   console.log('tratores', tratores.value)
 
-  // const checkBoxValues = Array.from(document.querySelectorAll('input[type=checkbox]:checked'))
-  //   .map(item => ({
-  //     name: item.name,
-  //     value: +item.value
-  //   })
-  // )
+  const checkBoxValuesImposto = Array.from(document.querySelectorAll('input.imposto[type=checkbox]:checked'))
+    .map(item => ({
+      name: item.name,
+      value: +item.value
+    })
+  )
 
-  let form1 = document.querySelector('.form');
-  let imposto = form1.name.value;
-  console.log(imposto)
-  // const pegaValor = document.querySelector('input#imposto[type=checkbox]:checked');
-  // console.log(pegaValor);
+  console.log('array com valores do checkbox', checkBoxValuesImposto);
 
-  // const checkBoxValuesImposto = Array.from(document.getElementById('#imposto[type=checkbox]:checked'))
-  //   .map(item => ({
-  //     name: item.name,
-  //     value: +item.value
-  //   })
-  // )
+  const checkBoxValuesAgro = Array.from(document.querySelectorAll('input.agro[type=checkbox]:checked'))
+    .map(item => ({
+      name: item.name,
+      value: +item.value
+    })
+  )
+  console.log('array com valores do checkbox', checkBoxValuesAgro);
 
-  // const checkBoxValuesAgro = Array.from(document.getElementById('#agro[type=checkbox]:checked'))
-  //   .map(item => ({
-  //     name: item.name,
-  //     value: +item.value
-  //   })
-  // )
+  const impostos = checkBoxValuesImposto.find(({ name }) => name === 'itr' ||  'irpf' || 'iss');
+  const agrotoxicos = checkBoxValuesAgro.find(({ name }) => name === 'herbicidas' ||  'inseticidas' || 'fungicidas');
 
-  // console.log('array com valores do checkbox', checkBoxValuesImposto);
-  // console.log('array com valores do checkbox', checkBoxValuesAgro);
-
-  // const impostos = checkBoxValuesImposto.find(({ name }) => name === 'itr' ||  'irpf' || 'iss');
-  // const agrotoxicos = checkBoxValuesAgro.find(({ name }) => name === 'herbicidas' ||  'inseticidas' || 'fungicidas');
-
-  // const imposto = impostos.name;
-  // console.log('agrotoxico', imposto);
+  const imposto = impostos.name;
+  console.log('impostos: ', imposto);
   
-  // const agrotoxico = agrotoxicos.name;
-  // console.log('agrotoxico', agrotoxico);
+  const agrotoxico = agrotoxicos.name;
+  console.log('agrotoxico', agrotoxico);
 
   let td = document.createElement("td");
   tabela.innerHTML =  `
@@ -119,6 +106,8 @@ form.addEventListener('submit', event => {
     <td>${produtos.value}</td>
     <td>${insumos.value}</td>
     <td>${tratores.value}</td>
+    <td>${imposto}</td>
+    <td>${agrotoxico}</td>
   `;
   tabela.append(td);
   abreModal()
