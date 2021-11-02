@@ -670,16 +670,16 @@ progress {
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) * -0.5);
-  margin-left: calc(var(--bs-gutter-x) * -0.5);
+  margin-right: calc(var(--bs-gutter-x) * -.5);
+  margin-left: calc(var(--bs-gutter-x) * -.5);
 }
 
 .row > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -12337,10 +12337,19 @@ main .user1__pesquisa .user1__btn .user1__btn__search {
   font-size: 24px;
   display: flex;
 }
+.form #form1 .form__group input {
+  background: none;
+  border: none;
+  padding: 8px;
+  width: 65%;
+  border-bottom: 3px solid white;
+  color: white;
+  outline: none;
+}
 .form #form1 .form__group select {
   background-color: white;
   padding: 8px;
-  width: 70%;
+  width: 65%;
   border-radius: 20px;
 }
 .form #form1 .form__group .checkbox {

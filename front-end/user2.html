@@ -50,8 +50,9 @@
                 <label for="produtos">Produtos</label> 
                 <select name="produtos" id="produtos">
                     <option value="3" >-- Selecione um Produto --</option>
-                    <option value="Teste 1" >Produtos 1</option>
-                    <option value="Teste 2" >Produtos 2</option>
+                    <option value="mudas">Mudas</option>
+                    <option value="vasos">Vasos</option>
+                    <option value="equipamentos">Equipamentos</option>
                 </select>
             </div>
 
@@ -59,8 +60,9 @@
                 <label for="insumos">Insumos</label>
                 <select name="insumos" id="insumos">
                     <option value="4" >-- Selecione um Insumo --</option>
-                    <option value="Teste 1" >Insumos 1</option>
-                    <option value="Teste 2" >Insumos 2</option>
+                    <option value="adubo">Adubo</option>
+                    <option value="sementes">Sementes</option>
+                    <option value="minhocas">Minhocas</option>
                 </select>
             </div>
 
@@ -74,23 +76,20 @@
             </div>
 
             <div class="form__group">
-                <label>Imposto</label>
-                <div id="imposto" class="checkbox" name="imposto">
-                    <div class="checkbox__item">
-                        <input type="checkbox" name="itr" value=2>
-                        <label>ITR</label>
-                    </div>
-                    <div class="checkbox__item">
-                        <input type="checkbox" name="irpf" value=4>
-                        <label>IRPF</label>
-                        
-                    </div>
-                    <div class="checkbox__item">
-                        <input type="checkbox" name="iss" value=8>
-                        <label>ISS</label>
-                    </div>
-                </div>
+                <label for="imposto">Imposto</label>
+                <select name="imposto" id="imposto">
+                    <option value="7" >-- Selecione um Imposto --</option>
+                    <option value="itr">ITR</option>
+                    <option value="irpf" >IRPF</option>
+                    <option value="iss" >ISS</option>
+                </select>
             </div>
+
+            <div class="form__group">
+                <label for="valor">Valor Arrecadado</label>
+                <input type="text" onkeypress="return onlynumber();" name="valor" id="valor" placeholder="Digite o Valor" required>
+            </div>
+            
             <button class="search__button" type="submit">
                 Pesquisar
             </button>

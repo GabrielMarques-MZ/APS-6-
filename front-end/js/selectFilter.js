@@ -15,6 +15,8 @@ let enderecoSel = document.getElementById("endereco");
 let produtosSel = document.getElementById("produtos");
 let insumosSel = document.getElementById("insumos");
 let tratoresSel = document.getElementById("tratores");
+let agrotoxicoSel = document.getElementById("agrotoxico");
+let impostoSel = document.getElementById("imposto");
 
 
 function abreModal(){
@@ -51,18 +53,32 @@ function resetaCampos(){
   window.location.reload()
 }
 
+function onlynumber(evt) {
+  var theEvent = evt || window.event;
+  var key = theEvent.keyCode || theEvent.which;
+  key = String.fromCharCode( key );
+  //var regex = /^[0-9.,]+$/;
+  var regex = /^[0-9.]+$/;
+  if( !regex.test(key) ) {
+     theEvent.returnValue = false;
+     if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}
+
 
 const form = document.forms.form1
 
 form.addEventListener('submit', event => {
   event.preventDefault()
-  const { locais, endereco, produtos, insumos, tratores } = form
+  const { locais, endereco, produtos, insumos, tratores, agrotoxico, imposto } = form
 
   if (locais.value === "1"
       || endereco.value === "2"
       || produtos.value === "3"
       || insumos.value === "4"
       || tratores.value === "5"
+      || agrotoxico.value === "6"
+      || imposto.value === "7"
   ) {
     return alert('Prencha todos os campos')
   }
@@ -72,32 +88,22 @@ form.addEventListener('submit', event => {
   console.log('produtos', produtos.value)
   console.log('insumos', insumos.value)
   console.log('tratores', tratores.value)
+  console.log('agrotoxico', agrotoxico.value)
+  console.log('imposto', imposto.value)
 
-  const checkBoxValuesImposto = Array.from(document.querySelectorAll('input.imposto[type=checkbox]:checked'))
-    .map(item => ({
-      name: item.name,
-      value: +item.value
-    })
-  )
+  // const checkBoxValuesImposto = Array.from(document.querySelectorAll('input.imposto[type=checkbox]:checked'))
+  //   .map(item => ({
+  //     name: item.name,
+  //     value: +item.value
+  //   })
+  // )
 
-  console.log('array com valores do checkbox', checkBoxValuesImposto);
+  // console.log('array com valores do checkbox', checkBoxValuesImposto);
 
-  const checkBoxValuesAgro = Array.from(document.querySelectorAll('input.agro[type=checkbox]:checked'))
-    .map(item => ({
-      name: item.name,
-      value: +item.value
-    })
-  )
-  console.log('array com valores do checkbox', checkBoxValuesAgro);
+  // const impostos = checkBoxValuesImposto.find(({ name }) => name === 'itr' ||  'irpf' || 'iss');
 
-  const impostos = checkBoxValuesImposto.find(({ name }) => name === 'itr' ||  'irpf' || 'iss');
-  const agrotoxicos = checkBoxValuesAgro.find(({ name }) => name === 'herbicidas' ||  'inseticidas' || 'fungicidas');
-
-  const imposto = impostos.name;
-  console.log('impostos: ', imposto);
-  
-  const agrotoxico = agrotoxicos.name;
-  console.log('agrotoxico', agrotoxico);
+  // const imposto = impostos.name;
+  // console.log('impostos: ', imposto);
 
   let td = document.createElement("td");
   tabela.innerHTML =  `
@@ -106,8 +112,8 @@ form.addEventListener('submit', event => {
     <td>${produtos.value}</td>
     <td>${insumos.value}</td>
     <td>${tratores.value}</td>
-    <td>${imposto}</td>
-    <td>${agrotoxico}</td>
+    <td>${agrotoxico.value}</td>
+    <td>${imposto.value}</td>
   `;
   tabela.append(td);
   abreModal()
