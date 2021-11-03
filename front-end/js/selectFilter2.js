@@ -15,7 +15,6 @@ let enderecoSel = document.getElementById("endereco");
 let produtosSel = document.getElementById("produtos");
 let insumosSel = document.getElementById("insumos");
 let tratoresSel = document.getElementById("tratores");
-let agrotoxicoSel = document.getElementById("agrotoxico");
 let impostoSel = document.getElementById("imposto");
 let valorBruto = document.getElementById("valor_bruto");
 
@@ -80,17 +79,14 @@ form.addEventListener('submit', event => {
       || produtos.value === "3"
       || insumos.value === "4"
       || tratores.value === "5"
-      || agrotoxico.value === "6"
       || imposto.value === "7"
   ) {
     return alert('Prencha todos os campos')
   }
 
 
-  let agroFormatado = parseInt(agrotoxico.value);
   let impostoFormatado = parseInt(imposto.value);
-  let descontoTotal = (agroFormatado + impostoFormatado)
-  let desconto = valorBruto.value * descontoTotal / 100;
+  let desconto = valorBruto.value * impostoFormatado / 100;
   let valorLiquido = valorBruto.value - desconto;
 
 
@@ -103,7 +99,6 @@ form.addEventListener('submit', event => {
     <td>${produtos.value}</td>
     <td>${insumos.value}</td>
     <td>${tratores.value}</td>
-    <td>${agrotoxico.value}%</td>
     <td>${imposto.value}%</td>
     <td>R$ ${valorBruto.value}</td>
     <td>R$ ${valorLiquido.toFixed(2)}</td>

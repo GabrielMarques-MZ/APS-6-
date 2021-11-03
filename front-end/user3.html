@@ -32,6 +32,8 @@
    
     <main class="form">
         <form name="form1" id="form1" action="/action_page.php">
+
+            
             <div class="form__group">
                 <label for="locais">Localização</label>
                 <select name="locais" id="locais">
@@ -70,34 +72,37 @@
                 <label for="tratores">Tratores</label>
                 <select name="tratores" id="tratores">
                     <option value="5" >-- Selecione um Trator --</option>
-                    <option value="Tem">Tem</option>
-                    <option value="Não Tem" >Não Tem</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
             </div>
 
             <div class="form__group">
                 <label for="agrotoxico">Agrotóxico</label>
                 <select name="agrotoxico" id="agrotoxico">
-                    <option value="6" >-- Selecione um Agrotóxico --</option>
-                    <option value="herbicidas">Herbicidas</option>
-                    <option value="inseticidas" >Inseticidas</option>
-                    <option value="fungincidas" >Fungicidas</option>
+                    <option value="6">-- Selecione um Agrotóxico --</option>
+                    <option value="7">Herbicidas - 7%</option>
+                    <option value="5" >Inseticidas - 5%</option>
+                    <option value="12" >Fungicidas - 12%</option>
                 </select>
             </div>
 
             <div class="form__group">
                 <label for="imposto">Imposto</label>
                 <select name="imposto" id="imposto">
-                    <option value="7" >-- Selecione um Imposto --</option>
-                    <option value="itr">ITR</option>
-                    <option value="irpf" >IRPF</option>
-                    <option value="iss" >ISS</option>
+                    <option value="7">-- Selecione um Imposto --</option>
+                    <option value="10">ITR - 10%</option>
+                    <option value="20" >IRPF - 20%</option>
+                    <option value="5" >ISS - 5%</option>
                 </select>
             </div>
 
             <div class="form__group">
-                <label for="valor">Valor Arrecadado</label>
-                <input type="text" onkeypress="return onlynumber();" name="valor" id="valor" placeholder="Digite o Valor" required>
+                <label for="valor">Valor Bruto</label>
+                <input type="text" onkeypress="return onlynumber();" name="valor" id="valor_bruto" placeholder="Digite o Valor" required>
             </div>
 
             <button class="search__button" type="submit">
@@ -120,6 +125,8 @@
                                     <th>Tratores</th>
                                     <th>Agrotóxico</th>
                                     <th>Imposto</th>
+                                    <th>Valor Bruto</th>
+                                    <th>Valor Líquido</th>
                                 </tr>
                             </thead>
                             <tbody id="tabela">
