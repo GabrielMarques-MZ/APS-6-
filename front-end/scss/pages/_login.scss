@@ -40,8 +40,10 @@
         border-radius: 30px;
         border: 3px solid $primary-color;
         cursor: pointer;
-        p {
+        label {
+          width: 100%;
           color: $primary-color;
+          cursor: pointer;
           @include fontes(16);
         }
       }
@@ -49,7 +51,7 @@
         border-color: $textColor1;
         transition: 0.3s;
       }
-      .btn_login:hover p {
+      .btn_login:hover label {
         color: $textColor1;
         transition: 0.3s;
       }

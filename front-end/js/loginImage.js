@@ -1,11 +1,9 @@
 
-let images = fetch("/json/images.json")
-.then(response => response.json())
-.then(json => console.log(json));
+let images = fetch("json/images.json")
+  .then(response => response.json())
+  .then(json => images = json);
 
-console.log(images)
-
-const usuarios = ['usuario1', 'usuario2', 'usuario3']
+const usuarios = ['user1', 'user2', 'user3']
 
 const fileSelector = document.getElementById('input-file');
 fileSelector.addEventListener('change', (event) => {
@@ -17,8 +15,16 @@ reader.onloadend = () => {
   const usuario = usuarios[index]
   if (!usuario) {
     alert('usuario não cadastrado')
+  }else if(usuario === 'user1'){
+    location.href = "/front-end/user1.html"
+    sessionStorage.setItem("auth", 'user1');
+  }else if (usuario === 'user2'){
+    location.href = "/front-end/user2.html"
+    sessionStorage.setItem("auth", 'user2');
+  }else if (usuario === 'user3'){
+    location.href = "/front-end/user3.html"
+    sessionStorage.setItem("auth", 'user3');
   }
-  console.log(`usuario`, usuario)
 }
 reader.readAsDataURL(file);
 });
