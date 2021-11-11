@@ -7,6 +7,7 @@
     <title>User 1</title>
 
     <link rel="stylesheet" href="style.css">
+
     <script>
         if(!sessionStorage.auth) location.href = "/front-end/login.html"
     </script>
@@ -23,88 +24,101 @@
                 </div>
                 <div class="header__user">
                     <img src="img/user_img.png" alt="">
-                    <span>Bem vindo Usuário</span>
+                    <span>Bem vindo Ministro</span>
                 </div>
             </div>
         </div>
     </header>
    
-    <main>
-        <div class="user1__pesquisa">
-            <div class="user1__form">
-                <form name="form1" id="form1" action="/action_page.php">
-                    <label for="locais">Localização</label>
-                    <select name="locais" id="locais">
-                      <option value="1">-- Selecione a Localização --</option>
-                    </select>
-                  </form>
-                <form >
-                    <label for="endereco">Endereço</label> 
-                    <select name="endereco" id="endereco">
-                      <option value="2">-- Selecione o Endereço --</option>
-                    </select>
-                </form>
-                <form >
-                    <label for="produtos">Produtos</label> 
-                    <select name="produtos" id="produtos">
-                        <option value="3" >-- Selecione um Produto --</option>
-                        <option value="Teste 1" >Produtos 1</option>
-                        <option value="Teste 2" >Produtos 2</option>
-                    </select>
-                </form>
-                <form >
-                    <label for="insumos">Insumos</label>
-                    <select name="insumos" id="insumos">
-                        <option value="4" >-- Selecione um Insumo --</option>
-                        <option value="Teste 1" >Insumos 1</option>
-                        <option value="Teste 2" >Insumos 2</option>
-                      </select>
-                </form>
-                <form >
-                    <label for="tratores">Tratores</label>
-                    <select name="tratores" id="tratores">
-                        <option value="5" >-- Selecione um Trator --</option>
-                        <option value="Tem">Tem</option>
-                        <option value="Não Tem" >Não Tem</option>
-                      </select>
-                </form>
+    <main class="form">
+        <form name="form1" id="form1" action="/action_page.php">
+            <div class="form__group">
+                <label for="locais">Localização</label>
+                <select name="locais" id="locais">
+                    <option value="1">-- Selecione a Localização --</option>
+                </select>
             </div>
-            <div class="modal fade" id="modal-mensagem">
-            <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
-                        </div>
-                        <div class="modal-body">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Localização</th>
-                                        <th>Endereço</th>
-                                        <th>Produtos</th>
-                                        <th>Insumos</th>
-                                        <th>Tratores</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tabela">
 
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="resetaCampos()">Fechar</button>
-                        </div>
+            <div class="form__group">
+                <label for="endereco">Endereço</label> 
+                <select name="endereco" id="endereco">
+                    <option value="2">-- Selecione o Endereço --</option>
+                </select>
+            </div>
+
+            <div class="form__group">
+                <label for="produtos">Produtos</label> 
+                <select name="produtos" id="produtos">
+                    <option value="3" >-- Selecione um Produto --</option>
+                    <option value="mudas">Mudas</option>
+                    <option value="vasos">Vasos</option>
+                    <option value="equipamentos">Equipamentos</option>
+                </select>
+            </div>
+
+            <div class="form__group">
+                <label for="insumos">Insumos</label>
+                <select name="insumos" id="insumos">
+                    <option value="4" >-- Selecione um Insumo --</option>
+                    <option value="adubo">Adubo</option>
+                    <option value="sementes">Sementes</option>
+                    <option value="minhocas">Minhocas</option>
+                </select>
+            </div>
+
+            <div class="form__group">
+                <label for="tratores">Tratores</label>
+                <select name="tratores" id="tratores">
+                    <option value="5" >-- Selecione um Trator --</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            
+            <button class="search__button" type="submit">
+                Pesquisar
+            </button>
+        
+    </form>
+
+    <div class="modal fade" id="modal-mensagem">
+        <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Localização</th>
+                                    <th>Endereço</th>
+                                    <th>Produtos</th>
+                                    <th>Insumos</th>
+                                    <th>Tratores</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button
+                        type="button"
+                        class="btn btn-default"
+                        data-dismiss="modal"
+                        onclick="resetaCampos()"
+                    >
+                        Fechar
+                    </button>
+
                     </div>
                 </div>
-            </div>
-            <div class="user1__btn">
-                <button id="botao" class="user1__btn__search" onclick="abreModal()">
-                    Pesquisar
-                </button>
             </div>
         </div>
     </main>
     <script src="js/popup.js"></script>
-    <script src="js/selectFilter.js"></script>
+    <script src="js/selectFilter1.js"></script>
 </body>
 </html>
