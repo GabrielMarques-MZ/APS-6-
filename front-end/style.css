@@ -11862,8 +11862,10 @@ header .header .nav ul li {
   border: 3px solid #28922c;
   cursor: pointer;
 }
-.body .area_login .campo_login .btn_login p {
+.body .area_login .campo_login .btn_login label {
+  width: 100%;
   color: #28922c;
+  cursor: pointer;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: bold;
@@ -11873,7 +11875,7 @@ header .header .nav ul li {
   border-color: #ffffff;
   transition: 0.3s;
 }
-.body .area_login .campo_login .btn_login:hover p {
+.body .area_login .campo_login .btn_login:hover label {
   color: #ffffff;
   transition: 0.3s;
 }
