@@ -16,17 +16,21 @@
   <div class="area_login">
     <div class="campo_login">
       <div class="foto_login"></div>
-      <div class="btn_login" onclick="pesquisaFoto()">
-        <p>UPLOAD</p>
+      <div class="btn_login">
+        <label for="input-file">UPLOAD
+          <input
+            type="file"
+            id="input-file"
+            name="input-file"
+            accept="image/png, image/jpeg"
+            style="display:none"
+          >
+        </label>
       </div>
       <a href="/front-end/login2.html" class="autentica">Deseja autenticar com login?????</a>
     </div>
   </div>
-
-  <script src="/front-end/js/user.js"></script>
+  <script src="/front-end/js/loginImage.js"></script>
   <script src="/front-end/js/selectFilter.js"></script>
-  <script src="/back-end/python.py"></script>
-
-
 </body>
 </html>
