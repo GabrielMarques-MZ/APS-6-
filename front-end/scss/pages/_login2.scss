@@ -80,6 +80,18 @@
         color: $textColor1;
         transition: 0.3s;
       }
+      .voltar_login {
+        text-align: center;
+      }
+      .voltar_login a {
+        color: $text-error;
+        @include fontes(16.1);
+        text-decoration: underline;
+      }
+      .voltar_login a:hover {
+        color: $textColor1;
+        transition: 0.3s;
+      }
     }
   }
 }

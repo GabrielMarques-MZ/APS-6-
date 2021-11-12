@@ -24,30 +24,30 @@
       .foto_login {
         width: 140px;
         height: 140px;
-        margin: 100px auto 100px auto;
+        margin: 100px auto 80px auto;
         border: 3px solid $primary-color;
         border-radius: 130px;
         background: url(..//front-end/img/user_img.png);
       }
-      #autentica_login {
-        .texto_login1 {
+      .texto_login1 {
+        p {
           display: none;
-          @keyframes pisca {
-            0% {
-              opacity: 0.2;
-            }
-            50% {
-              opacity: 1;
-            }
-            100% {
-              opacity: 0.2;
-            }
+        }
+        @keyframes pisca {
+          0% {
+            opacity: 0.2;
           }
-          .pisca {
-            animation-name: pisca;
-            animation-duration: 1.2s;
-            animation-iteration-count: infinite;
+          50% {
+            opacity: 1;
           }
+          100% {
+            opacity: 0.2;
+          }
+        }
+        .pisca {
+          animation-name: pisca;
+          animation-duration: 1.2s;
+          animation-iteration-count: infinite;
         }
       }
       .btn_login {

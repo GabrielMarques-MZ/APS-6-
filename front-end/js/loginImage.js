@@ -5,13 +5,12 @@ let images = fetch("json/images.json")
 
 const usuarios = ['user1', 'user2', 'user3']
 
-let botaoLogin = document.querySelector(".btn_login")
-let textLogin1 = document.getElementById("texto_login1")
-let autenticaLogin1 = document.getElementById("autentica_login")
-let pegaCampo1 = document.getElementById("campo_login1");
-let pegaFoto1 = document.getElementById("foto_login1");
-let pegaBtn = document.getElementById("btn_login");
-let pegaBtnText = document.querySelector(".btn_login p");
+let buscaCampo1 = document.querySelector(".campo_login");
+let buscaFoto1 = document.querySelector(".foto_login");
+let buscaCampoNegado = document.getElementById("nega_login");
+let buscaBotao = document.querySelector(".btn_login")
+let buscaLabel = document.getElementById("lbl_btn")
+console.log(buscaLabel)
 
 const fileSelector = document.getElementById('input-file');
 fileSelector.addEventListener('change', (event) => {
@@ -23,12 +22,13 @@ reader.onloadend = () => {
   const usuario = usuarios[index]
   if (!usuario) {
     alert("Usuário ou senha incorretos");
-    textLogin1.style.display = "block";
-    textLogin1.classList.add("pisca");
-    pegaCampo1.style.borderColor = "#de3535";
-    pegaFoto1.style.borderColor = "#de3535";
-    pegaBtn.style.borderColor = "#de3535";
-    pegaBtnText.style.color = "#FFF";
+    buscaCampo1.style.borderColor = "#de3535";
+    buscaFoto1.style.borderColor = "#de3535";
+    buscaCampoNegado.style.display = "block"
+    buscaCampoNegado.classList.add("pisca");
+    buscaCampoNegado.style.color = "#de3535";
+    buscaBotao.style.borderColor = "#de3535";
+    buscaLabel.style.color = "#de3535";
   }else if(usuario === 'user1'){
     location.href = "/front-end/user1.html"
     sessionStorage.setItem("auth", 'user1');

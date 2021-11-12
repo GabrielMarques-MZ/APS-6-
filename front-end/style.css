@@ -670,16 +670,16 @@ progress {
   display: flex;
   flex-wrap: wrap;
   margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) * -.5);
-  margin-left: calc(var(--bs-gutter-x) * -.5);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
 }
 
 .row > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -11845,12 +11845,12 @@ header .header .nav ul li {
 .body .area_login .campo_login .foto_login {
   width: 140px;
   height: 140px;
-  margin: 100px auto 100px auto;
+  margin: 100px auto 80px auto;
   border: 3px solid #28922c;
   border-radius: 130px;
   background: url(..//front-end/img/user_img.png);
 }
-.body .area_login .campo_login #autentica_login .texto_login1 {
+.body .area_login .campo_login .texto_login1 p {
   display: none;
 }
 @keyframes pisca {
@@ -11864,7 +11864,7 @@ header .header .nav ul li {
     opacity: 0.2;
   }
 }
-.body .area_login .campo_login #autentica_login .texto_login1 .pisca {
+.body .area_login .campo_login .texto_login1 .pisca {
   animation-name: pisca;
   animation-duration: 1.2s;
   animation-iteration-count: infinite;
@@ -11993,6 +11993,25 @@ header .header .nav ul li {
   color: #ffffff;
   transition: 0.3s;
 }
+.body .area__login__campo .voltar_login {
+  text-align: center;
+}
+.body .area__login__campo .voltar_login a {
+  color: #de3535;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  align-self: center;
+  color: #de3535;
+  place-content: center;
+  margin-top: 20px;
+  text-decoration: none;
+  text-decoration: underline;
+}
+.body .area__login__campo .voltar_login a:hover {
+  color: #ffffff;
+  transition: 0.3s;
+}
 
 #login::placeholder,
 #senha::placeholder {
@@ -12069,8 +12088,7 @@ header .header__user span {
   color: #ffffff;
 }
 header .header__user a {
-  padding-left: 15px;
-  text-decoration: none;
+  padding-left: 5px;
   color: #ffffff;
 }
 
