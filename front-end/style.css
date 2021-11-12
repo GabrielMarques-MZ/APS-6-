@@ -11850,6 +11850,25 @@ header .header .nav ul li {
   border-radius: 130px;
   background: url(..//front-end/img/user_img.png);
 }
+.body .area_login .campo_login #autentica_login .texto_login1 {
+  display: none;
+}
+@keyframes pisca {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+.body .area_login .campo_login #autentica_login .texto_login1 .pisca {
+  animation-name: pisca;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
 .body .area_login .campo_login .btn_login {
   display: flex;
   place-content: center;
@@ -11866,6 +11885,7 @@ header .header .nav ul li {
   width: 100%;
   color: #28922c;
   cursor: pointer;
+  text-align: center;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: bold;
@@ -12046,6 +12066,11 @@ header .header__user img {
 }
 header .header__user span {
   padding-left: 15px;
+  color: #ffffff;
+}
+header .header__user a {
+  padding-left: 15px;
+  text-decoration: none;
   color: #ffffff;
 }
 
@@ -12255,8 +12280,8 @@ main .user1__pesquisa .user1__btn .user1__btn__search {
   border: 3px solid #ffffff;
   background: #28922c;
   border-radius: 30px;
-  width: 200%;
-  margin-left: -130px;
+  width: 240%;
+  margin-left: -230px;
 }
 #modal-mensagem .modal-content .modal-body .table {
   background: linear-gradient(335deg, #85af3e 0, #6ea83a 16.67%, #519f34 33.33%, #27922b 50%, #008525 66.67%, #007b24 83.33%, #007328 100%);

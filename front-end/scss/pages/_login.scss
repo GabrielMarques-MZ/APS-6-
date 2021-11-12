@@ -29,6 +29,27 @@
         border-radius: 130px;
         background: url(..//front-end/img/user_img.png);
       }
+      #autentica_login {
+        .texto_login1 {
+          display: none;
+          @keyframes pisca {
+            0% {
+              opacity: 0.2;
+            }
+            50% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0.2;
+            }
+          }
+          .pisca {
+            animation-name: pisca;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite;
+          }
+        }
+      }
       .btn_login {
         display: flex;
         place-content: center;
@@ -44,6 +65,7 @@
           width: 100%;
           color: $primary-color;
           cursor: pointer;
+          text-align: center;
           @include fontes(16);
         }
       }
